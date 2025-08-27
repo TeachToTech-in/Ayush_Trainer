@@ -9,7 +9,7 @@ public class ATMDriver {
         sonAccount.setName("son");
         daughterAccount.setName("daughter");
 
-        fatherAccount.getStatement();
+        Bank.getStatement();
 
 
         fatherAccount.start();
@@ -21,7 +21,7 @@ public class ATMDriver {
         sonAccount.join();
         daughterAccount.join();
         
-        fatherAccount.getStatement();
+        Bank.getStatement();
 
 
 
