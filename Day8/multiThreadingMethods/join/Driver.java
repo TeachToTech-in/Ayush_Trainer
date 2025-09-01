@@ -1,4 +1,4 @@
-package Day8.multiThreadingMethods.yeild;
+package Day8.multiThreadingMethods.join;
 
 public class Driver {
     public static void main(String[] args) throws InterruptedException {
@@ -6,6 +6,7 @@ public class Driver {
         Thread t1 = new Thread(t);
 
         t1.start();
+        t1.join(5000);
         for (int i = 0; i < 10; i++)
             System.out.println("Main class");
 
