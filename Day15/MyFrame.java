@@ -7,7 +7,16 @@ import java.awt.event.MouseListener;
 
 public class MyFrame extends Frame implements MouseListener{
 
+//https://github.com/TeachToTech-in/Ayush_Trainer/tree/main/Day15
 
+    int x =0;
+    int y = 0;
+
+    @Override
+    public void paint(Graphics g) {
+        g.drawString("X:"+x+" Y:"+y,x,y);
+        paint(g);
+    }
 
      public static void main(String[] args) {
         MyFrame f = new MyFrame();
@@ -24,12 +33,18 @@ public class MyFrame extends Frame implements MouseListener{
         f.add(bt);
 
         bt.addMouseListener(f);
+
+        f.addMouseListener(f);
         
     }
 
      @Override
      public void mouseClicked(MouseEvent e) {
-        System.out.println("Hi");
+            x =e.getX();
+            y = e.getY();
+       //     System.out.println("x:"+ x + " y:"+y);
+            repaint();
+        
         // TODO Auto-generated method stub
       //  throw new UnsupportedOperationException("Unimplemented method 'mouseClicked'");
      }
